@@ -11,7 +11,7 @@ typedef struct node
 int BST_insert(NODE**,int);
 int BST_delete(NODE**,int);
 void BST_print(NODE*);
-void BST_distroy(NODE**);
+void BST_destroy(NODE**);
 void BST_print2(NODE*);
 void BST_print3(NODE*);
 
@@ -44,7 +44,7 @@ void main()
 		}
 		else if(choice==3)
 		{
-			BST_distroy(&root);
+			BST_destroy(&root);
 			break;
 		}
 		else if(choice==4)
@@ -164,7 +164,7 @@ void BST_print(NODE* root)
 	}
 }
 
-void BST_distroy(NODE** root){
+void BST_destroy(NODE** root){
 	while(*root)
 		BST_delete(root,(*root)->data);
 }
